@@ -8,9 +8,8 @@ public class ContaCorrente extends Conta {
 
 	@Override
 	public boolean sacar(double valor) {
-		if (valor > super.getSaldo()) {
-			super.sacar(valor);
-			return true;
+		if (valor <= super.getSaldo()) {
+			return super.sacar(valor);
 		} else {
 			return false;
 		}
